@@ -17,7 +17,7 @@ export class Experience {
     },
     {
       date: '2024',
-      title: 'Prácticas en Empresa XYZ',
+      title: 'Prácticas en el Antiguo Hospital Militar de Sevilla',
       description: 'Apoyo en mantenimiento de equipos y redes y soporte básico a usuarios y resolución de incidencias.',
       type: 'Prácticas'
     }

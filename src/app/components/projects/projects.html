@@ -1,11 +1,13 @@
-<section class="projects">
-    <h2>Proyectos</h2>
-    <p>Aquí tienes algunos de mis trabajos más recientes:</p>
+<main>
+    <section class="projects">
+        <h2>Proyectos</h2>
+        <p>Aquí tienes algunos de mis trabajos más recientes:</p>
 
-    <div class="projects-grid">
-        <app-project-card
-        *ngFor="let project of projects"
-        [project]="project">
-        </app-project-card>
-    </div>
-</section>
+        <div class="projects-grid">
+            <app-project-card
+            *ngFor="let project of projects"
+            [project]="project">
+            </app-project-card>
+        </div>
+    </section>
+</main>

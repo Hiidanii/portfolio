@@ -1,15 +1,17 @@
-<section class="experience">
-    <h2>Experiencia & Formación</h2>
-    <p>Mi trayectoria profesional y educativa:</p>
+<main>
+    <section class="experience">
+        <h2>Experiencia & Formación</h2>
+        <p>Mi trayectoria profesional y educativa:</p>
 
-    <div class="timeline">
-        <div class="timeline-item" *ngFor="let item of experiences">
-        <div class="timeline-date">{{ item.date }}</div>
-        <div class="timeline-content">
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.description }}</p>
-            <span class="timeline-type">{{ item.type }}</span>
+        <div class="timeline">
+            <div class="timeline-item" *ngFor="let item of experiences">
+            <div class="timeline-date">{{ item.date }}</div>
+            <div class="timeline-content">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+                <span class="timeline-type">{{ item.type }}</span>
+            </div>
+            </div>
         </div>
-        </div>
-    </div>
-</section>
+    </section>
+</main>
