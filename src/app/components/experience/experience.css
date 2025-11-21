@@ -7,7 +7,7 @@ main{
 .experience {
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: 550px;
     padding: 40px;
     background-color: #2d2c30ff;
     border: 2px solid #323135ff;
