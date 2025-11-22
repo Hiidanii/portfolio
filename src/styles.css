@@ -11,3 +11,139 @@ body {
     padding: 0;
     font-family: 'Poppins', apple-system-ui, sans-serif;
 }
+
+/* Responsive adjustments: preserve desktop styles, override only for narrower viewports */
+
+/* Tablets (<= 1024px) */
+@media (max-width: 1024px) {
+	.container {
+		gap: 24px;
+		margin-bottom: 80px;
+		padding: 0 20px;
+		/* allow column flow when needed but do not break desktop layout */
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.hero,
+	.projects {
+		width: calc(100% - 40px);
+		max-width: 720px;
+		padding: 32px;
+	}
+
+	.hero-image img {
+		width: 240px;
+		max-width: 45%;
+	}
+
+	.projects-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	/* Ensure main has horizontal padding on tablets so components don't touch edges */
+	main {
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
+}
+
+/* Móviles (<= 767px) */
+@media (max-width: 767px) {
+	/* Add horizontal padding on small screens to guarantee gutters */
+	main {
+		padding: 20px 12px;
+		box-sizing: border-box;
+	}
+
+	.container {
+		gap: 16px;
+		margin-bottom: 60px;
+		padding: 0 12px;
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	/* Make hero stack vertically on small screens */
+	.hero {
+		flex-direction: column;
+		width: calc(100% - 24px);
+		padding: 18px;
+		align-items: center;
+		height: auto;
+	}
+
+	.hero-content h1 {
+		font-size: 2rem;
+		text-align: center;
+		line-height: 1.1;
+	}
+
+	.hero-image {
+		margin-top: 14px;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.hero-image img {
+		width: 180px;
+		max-width: 60%;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	.hero-buttons {
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 10px;
+		margin-top: 12px;
+	}
+
+	.projects {
+		width: calc(100% - 24px);
+		padding: 18px;
+	}
+
+	.projects-grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	/* Make project images adapt and not be extremely tall on mobile */
+	.project-card img {
+		width: 100%;
+		height: auto;
+		max-height: 220px;
+		object-fit: cover;
+	}
+}
+
+/* Reveal on scroll utilities */
+.reveal {
+	opacity: 0;
+	transform: translateY(18px) scale(0.995);
+	transition: opacity 600ms cubic-bezier(.2,.9,.2,1), transform 600ms cubic-bezier(.2,.9,.2,1);
+	will-change: opacity, transform;
+}
+
+.reveal.visible {
+	opacity: 1;
+	transform: translateY(0) scale(1);
+}
+
+/* Optional: subtle stagger when multiple children have reveal */
+.reveal[data-delay] {
+	transition-delay: var(--reveal-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.reveal,
+	.reveal.visible {
+		transition: none !important;
+		transform: none !important;
+		opacity: 1 !important;
+	}
+}
+
+/* Helper: you can add inline style="--reveal-delay:120ms" to stagger items */

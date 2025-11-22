@@ -115,3 +115,53 @@
     color: #61b8ffff;
     font-size: 0.8rem;
 }
+
+/* Responsive: make contact panel friendlier on tablets and mobiles */
+@media (max-width: 1024px) {
+    .contact-panel {
+        width: 360px;
+        max-width: calc(100vw - 64px);
+        padding: 16px;
+    }
+
+    .contact-toggle {
+        right: 12px;
+        top: 6%;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-toggle {
+        right: 12px;
+        top: auto;
+        bottom: 12px;
+        transform: none;
+        padding: 8px 10px;
+    }
+
+    /* Make the panel full-width-like and slide from the right more naturally */
+    .contact-panel {
+        width: calc(100% - 24px);
+        max-width: calc(100% - 24px);
+        right: 12px;
+        top: 12px;
+        transform: translate(calc(100% + 24px), 0);
+        padding: 14px;
+    }
+
+    #contact-toggle:checked ~ .contact-panel {
+        transform: translate(0, 0);
+    }
+
+    .contact-panel .contact h2 {
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .contact-panel input[type="text"],
+    .contact-panel input[type="email"],
+    .contact-panel textarea {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+}

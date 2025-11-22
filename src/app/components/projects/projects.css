@@ -35,3 +35,32 @@ main {
     margin-top: 30px;
 }
 
+/* Responsive grid behavior */
+@media (max-width: 1024px) {
+    .projects-grid {
+        /* Mostrar 1 proyecto por fila en tablets para coincidir con escritorio y móvil */
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .projects {
+        width: calc(100% - 40px);
+        max-width: 920px;
+        padding: 32px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .projects {
+        width: calc(100% - 24px);
+        padding: 18px;
+        margin: 0 auto;
+    }
+}
+

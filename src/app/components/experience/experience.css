@@ -30,7 +30,6 @@ main{
 
 .timeline {
     margin-top: 30px;
-    width: 100%;
     border-left: 2px solid #6164ffff;
     padding-left: 20px;
 }
@@ -74,4 +73,39 @@ main{
     margin-top: 8px;
     font-weight: bold;
     color: #6198ffff;
+}
+
+/* Responsive adjustments for experience section */
+@media (max-width: 1024px) {
+    .experience {
+        width: calc(100% - 40px);
+        max-width: 720px;
+        padding: 32px;
+    }
+
+    .timeline {
+        padding-left: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .experience {
+        width: calc(100% - 24px);
+        padding: 16px;
+        margin: 0 auto;
+    }
+
+    .experience h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .timeline {
+        border-left-width: 2px;
+        padding-left: 12px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.05rem;
+    }
 }

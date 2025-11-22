@@ -51,3 +51,41 @@ main {
 .skills-icons img:hover {
     transform: scale(1.1);
 }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .about {
+        width: calc(100% - 40px);
+        max-width: 720px;
+        padding: 32px;
+    }
+
+    .skills-icons img {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about {
+        width: calc(100% - 24px);
+        padding: 16px;
+        margin: 0 auto;
+    }
+
+    .about-text h2, .about-skills h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .skills-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

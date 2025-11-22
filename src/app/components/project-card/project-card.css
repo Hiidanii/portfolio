@@ -46,3 +46,22 @@
     font-size: 0.85rem;
     cursor: default;
 }
+
+/* Mobile tweaks for project cards */
+@media (max-width: 767px) {
+    .project-card {
+        padding: 12px;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: auto;
+        max-height: 220px;
+        object-fit: cover;
+        margin-bottom: 12px;
+    }
+
+    .project-card p {
+        font-size: 0.95rem;
+    }
+}
