@@ -32,6 +32,7 @@ main {
     letter-spacing: 1px;
     line-height: 1.05;
     position: relative;
+    cursor: default;
     transition: transform 300ms ease, letter-spacing 300ms ease, filter 300ms ease;
     animation: gradientMove 5s linear infinite, floatUp 6s ease-in-out infinite;
 }

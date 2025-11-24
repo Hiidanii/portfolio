@@ -11,11 +11,11 @@ import { CommonModule } from '@angular/common';
 })
 export class Projects {
   projects = [
-{
+    {
       title: 'Gestor de Tareas',
       description: 'Aplicación web para organizar tareas diarias en local storage.',
       image: '/projects/task-manager.png',
-      tech: ['Angular', 'CSS', 'HTML', 'JavaScript']
+      tech: ['Angular', 'TypeScript', 'HTML', 'CSS']
     }
   ];
 }
