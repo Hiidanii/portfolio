@@ -13,5 +13,6 @@ export class ProjectCard {
     description: string;
     image: string;
     tech: string[];
+    link: string;
   }
 }
