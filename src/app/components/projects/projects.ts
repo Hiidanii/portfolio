@@ -16,7 +16,7 @@ export class Projects {
       description: 'Aplicación web para organizar tareas diarias en local storage.',
       image: '/projects/task-manager.png',
       tech: ['Angular', 'TypeScript', 'HTML', 'CSS'],
-      link: 'https://github.com/Hiidanii/tarjetasPresentacion'
+      link: 'https://github.com/Hiidanii/gestorTareas'
     }
   ];
 }
