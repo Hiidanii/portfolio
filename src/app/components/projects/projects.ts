@@ -17,6 +17,13 @@ export class Projects {
       image: '/projects/task-manager.png',
       tech: ['Angular', 'TypeScript', 'HTML', 'CSS'],
       link: 'https://github.com/Hiidanii/gestorTareas'
+    },
+    {
+      title: 'Cronómetro',
+      description: 'Cronómetro simple con funciones de inicio, pausa y reinicio.',
+      image: '/projects/stopwatch.png',
+      tech: ['Angular', 'TypeScript', 'HTML', 'CSS'],
+      link: 'https://github.com/Hiidanii/cronometro'
     }
   ];
 }
