@@ -16,7 +16,7 @@ export class Projects {
       description: 'Aplicación web para registrar y visualizar el estado de ánimo diario a lo largo del año, organizada por meses, usando solo frontend y localStorage.',
       image: '/projects/mood-calendar.png',
       tech: ['Angular', 'TypeScript', 'LocalStorage'],
-      link: 'https://github.com/Hiidanii/mood-calendar'
+      link: 'https://hiidanii-mood-calendar.vercel.app/'
     }
   ];
 }
