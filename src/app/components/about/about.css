@@ -83,16 +83,13 @@ main {
 
     .about-text h2, .about-skills h2 {
         font-size: 1.6rem;
-        text-align: center;
     }
 
     .about-text p {
         font-size: 1rem;
-        text-align: center;
     }
 
     .skills-icons {
-        justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
     }

@@ -109,7 +109,6 @@ main{
 
     .experience h2 {
         font-size: 1.6rem;
-        text-align: center;
     }
 
     .timeline {
@@ -130,7 +129,6 @@ main{
 
     .experience p {
         font-size: 1rem;
-        text-align: center;
     }
 }
 
