@@ -12,18 +12,11 @@ import { CommonModule } from '@angular/common';
 export class Projects {
   projects = [
     {
-      title: 'Gestor de Tareas',
-      description: 'Aplicación web para organizar tareas diarias en local storage.',
-      image: '/projects/task-manager.png',
-      tech: ['Angular', 'TypeScript', 'HTML', 'CSS'],
-      link: 'https://github.com/Hiidanii/gestorTareas'
-    },
-    {
-      title: 'Cronómetro',
-      description: 'Cronómetro simple con funciones de inicio, pausa y reinicio.',
-      image: '/projects/stopwatch.png',
-      tech: ['Angular', 'TypeScript', 'HTML', 'CSS'],
-      link: 'https://github.com/Hiidanii/cronometro'
+      title: 'Mood Calendar',
+      description: 'Aplicación web para registrar y visualizar el estado de ánimo diario a lo largo del año, organizada por meses, usando solo frontend y localStorage.',
+      image: '/projects/mood-calendar.png',
+      tech: ['Angular', 'TypeScript', 'LocalStorage'],
+      link: 'https://github.com/Hiidanii/mood-calendar'
     }
   ];
 }

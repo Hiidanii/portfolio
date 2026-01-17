@@ -18,9 +18,23 @@ export class Contact {
 
   onSubmit() {
     if (this.contactForm.valid) {
-      console.log('Formulario enviado:', this.contactForm.value);
-      alert('Gracias por contactarme!!');
-      this.contactForm.reset();
+      const { name, email, message } = this.contactForm.value as { name?: string; email?: string; message?: string };
+
+      const subject = `Contacto desde portfolio: ${name || 'Sin nombre'}`;
+      const body = [
+        `Nombre: ${name || ''}`,
+        `Correo: ${email || ''}`,
+        '',
+        message || ''
+      ].join('\n');
+
+      const mailto = `mailto:danielfabian.rando@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      // Abrir el cliente de correo del usuario con los campos pre-rellenados
+      window.location.href = mailto;
+
+      // resetear el formulario ligeramente después
+      setTimeout(() => this.contactForm.reset(), 300);
     }
   }
 }

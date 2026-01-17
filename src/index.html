@@ -8,6 +8,103 @@
   <link rel="icon" type="image/x-icon" href="icon.png">
 </head>
 <body>
+  <canvas id="meteors-canvas" aria-hidden="true"></canvas>
   <app-root></app-root>
+
+  <script>
+  (function(){
+    const canvas = document.getElementById('meteors-canvas');
+    if(!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let DPR = window.devicePixelRatio || 1;
+    let width = 0, height = 0;
+
+    const palette = ['#61b8ff', '#6179ff', '#6164ff', '#9e61ff', '#93f5d7'];
+
+    function resize(){
+      DPR = window.devicePixelRatio || 1;
+      width = window.innerWidth; height = window.innerHeight;
+      canvas.width = Math.round(width * DPR);
+      canvas.height = Math.round(height * DPR);
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+      ctx.setTransform(DPR,0,0,DPR,0,0);
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    const meteors = [];
+
+    function rand(min, max){ return Math.random()*(max-min)+min; }
+
+    function spawnMeteor(){
+      const size = rand(80, 220);
+      const angle = rand(20, 55) * Math.PI/180;
+      const speed = rand(300, 900) / 1000;
+      const x = rand(0, width);
+      const y = -rand(10, 180);
+      const color = palette[Math.floor(Math.random()*palette.length)];
+      meteors.push({x,y,size,angle,speed,color,life:0,ttl:rand(900,1800)});
+      if(meteors.length > 120) meteors.splice(0, meteors.length-120);
+    }
+
+    let last = performance.now();
+    function update(now){
+      const dt = now - last; last = now;
+      ctx.clearRect(0,0,width,height);
+
+      if(Math.random() < 0.02) spawnMeteor();
+
+      for(let i = meteors.length-1; i>=0; i--){
+        const m = meteors[i];
+        m.life += dt;
+        const travel = m.speed * dt;
+        m.x += Math.cos(m.angle) * travel;
+        m.y += Math.sin(m.angle) * travel;
+
+        const t = m.life / m.ttl;
+        const alpha = Math.max(0, 1 - t);
+
+        const len = m.size * (0.6 + 0.6*(1-t));
+        ctx.save();
+        ctx.globalCompositeOperation = 'lighter';
+        ctx.translate(m.x, m.y);
+        ctx.rotate(m.angle + Math.PI);
+
+        const grad = ctx.createLinearGradient(0,0,len,0);
+        grad.addColorStop(0, m.color);
+        grad.addColorStop(1, 'rgba(255,255,255,0)');
+
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.moveTo(0, -1.2);
+        ctx.lineTo(len, -0.6);
+        ctx.lineTo(len, 0.6);
+        ctx.lineTo(0, 1.2);
+        ctx.closePath();
+        ctx.globalAlpha = alpha * 0.95;
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = m.color;
+        ctx.globalAlpha = alpha;
+        ctx.arc(0,0, Math.max(1, m.size*0.02), 0, Math.PI*2);
+        ctx.fill();
+        ctx.restore();
+
+        if(m.y - m.size > height || m.x - m.size > width || alpha <= 0){
+          meteors.splice(i,1);
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    canvas.style.pointerEvents = 'none';
+    last = performance.now();
+    requestAnimationFrame(update);
+  })();
+  </script>
 </body>
 </html>
