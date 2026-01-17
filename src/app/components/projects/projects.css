@@ -30,31 +30,58 @@ main {
 }
 
 /* Responsive grid behavior */
+@media (max-width: 1280px) {
+    .projects {
+        width: calc(100% - 56px);
+        max-width: 900px;
+        padding: 36px;
+        margin: 0 auto;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
+
 @media (max-width: 1024px) {
     .projects-grid {
-        /* Mostrar 1 proyecto por fila en tablets para coincidir con escritorio y móvil */
         grid-template-columns: 1fr;
         gap: 18px;
     }
 
     .projects {
         width: calc(100% - 40px);
-        max-width: 920px;
+        max-width: 760px;
         padding: 32px;
         margin: 0 auto;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
 
     .projects {
-        width: calc(100% - 24px);
-        padding: 18px;
+        width: calc(100% - 28px);
+        padding: 20px;
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 430px) {
+    .projects {
+        width: calc(100% - 24px);
+        padding: 16px;
+    }
+}
+
+@media (max-width: 385px) {
+    .projects {
+        width: calc(100% - 20px);
+        padding: 14px;
     }
 }
 

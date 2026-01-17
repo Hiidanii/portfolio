@@ -6,9 +6,17 @@
 }
 
 /* Local responsive adjustments for layout container */
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
     .container {
         gap: 28px;
+        margin-bottom: 100px;
+        padding: 0 28px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        gap: 24px;
         margin-bottom: 80px;
         padding: 0 20px;
         flex-direction: column;
@@ -16,11 +24,27 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .container {
-        gap: 16px;
-        margin-bottom: 60px;
-        padding: 0 12px;
+        gap: 18px;
+        margin-bottom: 70px;
+        padding: 0 14px;
         align-items: stretch;
+    }
+}
+
+@media (max-width: 430px) {
+    .container {
+        gap: 14px;
+        margin-bottom: 56px;
+        padding: 0 12px;
+    }
+}
+
+@media (max-width: 385px) {
+    .container {
+        gap: 12px;
+        margin-bottom: 48px;
+        padding: 0 10px;
     }
 }

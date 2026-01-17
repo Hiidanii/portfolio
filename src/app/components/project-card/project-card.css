@@ -55,21 +55,53 @@ a {
     background-color:   rgba(97, 121, 255, 0.727);
 }
 
-/* Mobile tweaks for project cards */
-@media (max-width: 767px) {
+/* Responsive tweaks for project cards */
+@media (max-width: 1280px) {
+    .project-card img {
+        height: 360px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .project-card img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
     .project-card {
-        padding: 12px;
+        padding: 16px;
     }
 
     .project-card img {
         width: 100%;
         height: auto;
-        max-height: 220px;
+        max-height: 240px;
         object-fit: cover;
         margin-bottom: 12px;
     }
 
     .project-card p {
-        font-size: 0.95rem;
+        font-size: 0.98rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .project-card {
+        padding: 12px;
+    }
+
+    .project-card img {
+        max-height: 210px;
+    }
+}
+
+@media (max-width: 385px) {
+    .project-card {
+        padding: 10px;
+    }
+
+    .project-card p {
+        font-size: 0.92rem;
     }
 }

@@ -80,10 +80,18 @@ main{
 }
 
 /* Responsive adjustments for experience section */
+@media (max-width: 1280px) {
+    .experience {
+        width: calc(100% - 56px);
+        max-width: 900px;
+        padding: 36px;
+    }
+}
+
 @media (max-width: 1024px) {
     .experience {
         width: calc(100% - 40px);
-        max-width: 720px;
+        max-width: 760px;
         padding: 32px;
     }
 
@@ -92,10 +100,10 @@ main{
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .experience {
-        width: calc(100% - 24px);
-        padding: 16px;
+        width: calc(100% - 28px);
+        padding: 18px;
         margin: 0 auto;
     }
 
@@ -111,5 +119,28 @@ main{
 
     .timeline-content h3 {
         font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .experience {
+        width: calc(100% - 24px);
+        padding: 16px;
+    }
+
+    .experience p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 385px) {
+    .experience {
+        width: calc(100% - 20px);
+        padding: 14px;
+    }
+
+    .timeline-content {
+        padding: 12px;
     }
 }
