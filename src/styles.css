@@ -1,15 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+:root {
+	/* Colores */
+	--bg-primary: #2d2c30;
+	--bg-secondary: #3a383d;
+	--bg-tertiary: #26262b;
+	--bg-footer: #1e1e22;
+	--border-primary: #323135;
+	--border-secondary: #222227;
+	--text-primary: #ffffff;
+	--text-secondary: #cccccc;
+	--text-tertiary: #e0e0e0;
+	--text-muted: #999999;
+	--text-footer: #888888;
+	--accent-primary: #6164ff;
+	--accent-blue: #6198ff;
+	--accent-hover: #484649;
+	--accent-purple: rgba(107, 97, 255, 0.727);
+
+	/* Espaciado */
+	--spacing-xs: 10px;
+	--spacing-sm: 15px;
+	--spacing-md: 20px;
+	--spacing-lg: 30px;
+	--spacing-xl: 40px;
+
+	/* Transiciones */
+	--transition-fast: 200ms ease;
+	--transition-medium: 300ms ease;
+
+	/* Bordes */
+	--border-radius-sm: 5px;
+	--border-radius-md: 8px;
+	--border-radius-lg: 10px;
+	--border-radius-xl: 12px;
+
+	/* Sombras */
+	--shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+	--shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+	--shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 body {
-	/* Fondo de cuadrícula: líneas horizontales y verticales */
-	background-color: #2d2c30ff;
+	background-color: var(--bg-primary);
 	background-image:
-		linear-gradient(to right, #323135ff 2px, transparent 1px),
-		linear-gradient(to bottom,  #323135ff 2px, transparent 1px);
+		linear-gradient(to right, var(--border-primary) 2px, transparent 1px),
+		linear-gradient(to bottom, var(--border-primary) 2px, transparent 1px);
 	background-size: 50px 50px;
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
 }
 
 /* Diseño responsive */

@@ -8,51 +8,51 @@ main {
     display: flex;
     flex-direction: column;
     width: 550px;
-    padding: 40px;
-    background-color: #2d2c30ff;
-    border: 2px solid #323135ff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: var(--spacing-xl);
+    background-color: var(--bg-primary);
+    border: 2px solid var(--border-primary);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
 }
 
-.about-text, .about-skills {
+.about-text,
+.about-skills {
     width: 100%;
 }
 
-.about-text h2, .about-skills h2 {
+.about-text h2,
+.about-skills h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
-    margin-top: 0;
-    color: #ffffff;
+    margin: 0 0 var(--spacing-md) 0;
+    color: var(--text-primary);
 }
 
 .about-text p {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #cccccc;
+    color: var(--text-secondary);
 }
 
 .about-skills {
-    margin-top: 30px;
+    margin-top: var(--spacing-lg);
 }
 
 .skills-icons {
     display: flex;
-    gap: 15px;
+    gap: var(--spacing-sm);
 }
 
 .skills-icons img {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    transition: transform 200ms ease;
+    transition: transform var(--transition-fast);
 }
 
 .skills-icons img:hover {
     transform: scale(1.1);
 }
 
-/* Responsive adjustments */
 @media (max-width: 1280px) {
     .about {
         width: calc(100% - 56px);
@@ -81,7 +81,8 @@ main {
         margin: 0 auto;
     }
 
-    .about-text h2, .about-skills h2 {
+    .about-text h2,
+    .about-skills h2 {
         font-size: 1.6rem;
     }
 
@@ -91,7 +92,7 @@ main {
 
     .skills-icons {
         flex-wrap: wrap;
-        gap: 10px;
+        gap: var(--spacing-xs);
     }
 }
 

@@ -1,4 +1,4 @@
-main{
+main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,55 +8,54 @@ main{
     display: flex;
     flex-direction: column;
     width: 550px;
-    padding: 40px;
-    background-color: #2d2c30ff;
-    border: 2px solid #323135ff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: var(--spacing-xl);
+    background-color: var(--bg-primary);
+    border: 2px solid var(--border-primary);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
 }
 
 .experience h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
-    margin-top: 0;
-    color: #ffffff;
+    margin: 0 0 var(--spacing-md) 0;
+    color: var(--text-primary);
 }
 
 .experience p {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #cccccc;
+    color: var(--text-secondary);
 }
 
 .timeline {
-    margin-top: 30px;
-    border-left: 2px solid #6164ffff;
-    padding-left: 20px;
+    margin-top: var(--spacing-lg);
+    border-left: 2px solid var(--accent-primary);
+    padding-left: var(--spacing-md);
     cursor: pointer;
 }
 
 .timeline-item {
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing-md);
     position: relative;
 }
 
 .timeline-date {
     font-size: 0.9rem;
-    color: #999999;
+    color: var(--text-muted);
     margin-bottom: 5px;
 }
 
 .timeline-content {
-    background-color: #3a383dff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: #e0e0e0;
-    transition: background-color 200ms ease;
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
+    color: var(--text-tertiary);
+    transition: background-color var(--transition-fast);
 }
 
 .timeline-content:hover {
-    background-color: #484649ff;
+    background-color: var(--accent-hover);
 }
 
 .timeline-content h3 {
@@ -75,7 +74,7 @@ main{
 .timeline-content span {
     margin-top: 8px;
     font-weight: bold;
-    color: #6198ffff;
+    color: var(--accent-blue);
     cursor: text;
 }
 

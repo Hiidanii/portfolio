@@ -9,24 +9,23 @@ main {
     display: flex;
     flex-direction: column;
     width: 1000px;
-    padding: 40px;
-    background-color: #2d2c30ff;
-    border: 2px solid #323135ff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: var(--spacing-xl);
+    background-color: var(--bg-primary);
+    border: 2px solid var(--border-primary);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
 }
 
 .projects h2 {
     font-size: 2rem;
-    margin-bottom: 0;
-    margin-top: 0;
-    color: #ffffff;
+    margin: 0;
+    color: var(--text-primary);
 }
 
 .projects-grid {
     display: grid;
-    gap: 20px;
-    margin-top: 30px;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
 }
 
 /* Responsive grid behavior */
